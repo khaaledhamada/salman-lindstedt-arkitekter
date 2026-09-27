@@ -16,6 +16,8 @@
   --font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --text-size: 1.125rem;
   --heading-size: clamp(1.75rem, 3.2vw, 2.25rem);
+  --weight-regular: 400;
+  --weight-bold: 600;
 }
 
 * {
@@ -36,6 +38,7 @@ body {
   color: var(--ink);
   font-family: var(--font-family);
   font-size: var(--text-size);
+  font-weight: var(--weight-regular);
   line-height: 1.55;
 }
 
@@ -93,7 +96,7 @@ main { position: relative; }
 
 .brand {
   display: grid;
-  font-weight: 600;
+  font-weight: var(--weight-bold);
   line-height: 1.2;
   text-transform: uppercase;
 }
@@ -103,7 +106,6 @@ main { position: relative; }
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: 12px 28px;
-  color: var(--muted);
 }
 
 .nav a,
@@ -178,12 +180,18 @@ main { position: relative; }
   border-bottom: 1px solid currentColor;
 }
 
+.nav a,
+.eyebrow {
+  color: var(--muted);
+  font-size: var(--text-size);
+  font-weight: var(--weight-bold);
+  line-height: 1.55;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
 .eyebrow {
   margin: 0 0 18px;
-  color: var(--sage);
-  font-weight: 600;
-  letter-spacing: 0;
-  text-transform: uppercase;
 }
 
 h1,
@@ -197,7 +205,7 @@ h1,
 h2,
 .hero-copy .hero-intro {
   font-size: var(--heading-size);
-  font-weight: 600;
+  font-weight: var(--weight-bold);
   line-height: 1.2;
   letter-spacing: 0;
 }
@@ -222,7 +230,7 @@ h2 {
   align-items: center;
   gap: 8px;
   color: var(--ink);
-  font-weight: 600;
+  font-weight: var(--weight-bold);
   text-transform: uppercase;
   border-bottom: 1px solid currentColor;
 }
@@ -230,7 +238,7 @@ h2 {
 .text-link::after {
   content: "+";
   color: var(--muted);
-  font-weight: 400;
+  font-weight: var(--weight-regular);
 }
 
 .about-grid {
@@ -280,7 +288,7 @@ h2 {
   margin: 0 0 4px;
   color: var(--ink);
   font-size: inherit;
-  font-weight: 600;
+  font-weight: var(--weight-bold);
 }
 
 .person-role {
@@ -363,7 +371,7 @@ address a {
 @media (max-width: 560px) {
   .site-header {
     align-items: center;
-    gap: 16px;
+    gap: 16px 6px;
   }
 
   .site-footer {
