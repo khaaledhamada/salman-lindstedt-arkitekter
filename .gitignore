@@ -1,0 +1,13 @@
+# Publish only the website and its active assets. Local notes and source originals stay local.
+/*
+!/.gitignore
+!/.nojekyll
+!/README.md
+!/index.html
+!/styles.css
+!/robots.txt
+!/assets/
+/assets/*
+!/assets/salman-lindstedt-logo.jpg
+!/assets/salman-lindstedt-grid.jpg
+!/assets/alhawraa-gunnar-portrait.jpg
