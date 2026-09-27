@@ -13,7 +13,9 @@
   --wide: 1360px;
   --rail: 160px;
   --section-gap: clamp(20px, 3vw, 36px);
-  --script: Caveat, "Segoe Print", cursive;
+  --font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --text-size: 1.125rem;
+  --heading-size: clamp(1.75rem, 3.2vw, 2.25rem);
 }
 
 * {
@@ -32,8 +34,8 @@ body {
   margin: 0;
   background: transparent;
   color: var(--ink);
-  font-family: Inter, Arial, sans-serif;
-  font-size: 16px;
+  font-family: var(--font-family);
+  font-size: var(--text-size);
   line-height: 1.55;
 }
 
@@ -62,6 +64,7 @@ a {
   position: relative;
   z-index: 10;
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
   gap: 24px;
@@ -81,7 +84,6 @@ main { position: relative; }
 
 .brand {
   display: grid;
-  font-size: 14px;
   font-weight: 600;
   line-height: 1.2;
   text-transform: uppercase;
@@ -93,7 +95,6 @@ main { position: relative; }
   justify-content: flex-end;
   gap: 12px 28px;
   color: var(--muted);
-  font-size: 14px;
 }
 
 .nav a,
@@ -143,15 +144,10 @@ main { position: relative; }
 .hero-copy .hero-intro {
   margin: 0 0 24px;
   color: var(--ink);
-  font-family: "Libre Baskerville", Georgia, serif;
-  font-size: clamp(28px, 3.2vw, 44px);
-  line-height: 1.22;
-  letter-spacing: -0.025em;
 }
 
 .hero-copy > p:not(.eyebrow):not(.hero-intro) {
   color: var(--muted);
-  font-size: clamp(17px, 1.6vw, 20px);
 }
 
 .contact-link {
@@ -161,17 +157,11 @@ main { position: relative; }
   min-height: 44px;
   margin-top: 8px;
   border-bottom: 1px solid currentColor;
-  font-size: 15px;
-  font-weight: 500;
 }
 
-.contact-link span {
-  font-size: 22px;
-}
 .eyebrow {
   margin: 0 0 18px;
   color: var(--sage);
-  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0;
   text-transform: uppercase;
@@ -185,17 +175,17 @@ p {
 }
 
 h1,
-h2 {
-  font-family: "Libre Baskerville", Georgia, serif;
-  font-weight: 400;
-  line-height: 1.05;
+h2,
+.hero-copy .hero-intro {
+  font-size: var(--heading-size);
+  font-weight: 600;
+  line-height: 1.2;
   letter-spacing: 0;
 }
 
 
 h2 {
   margin-bottom: 0;
-  font-size: clamp(28px, 3.8vw, 48px);
 }
 
 .section {
@@ -217,7 +207,6 @@ h2 {
   align-items: center;
   gap: 8px;
   color: var(--ink);
-  font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
   border-bottom: 1px solid currentColor;
@@ -239,7 +228,6 @@ h2 {
 .about-text {
   grid-column: 2;
   color: var(--muted);
-  font-size: clamp(17px, 1.8vw, 20px);
 }
 
 .team {
@@ -281,20 +269,18 @@ h2 {
 .person-contact h3 {
   margin: 0 0 4px;
   color: var(--ink);
-  font-size: 19px;
+  font-size: inherit;
   font-weight: 600;
 }
 
 .person-role {
   margin: 0 0 12px;
   color: var(--muted);
-  font-size: 14px;
 }
 
 .person-contact address {
   justify-items: start;
   gap: 8px;
-  font-size: 16px;
 }
 
 .person-contact address a:hover {
@@ -314,8 +300,6 @@ h2 {
   min-height: 44px;
   color: var(--ink);
   border-bottom: 1px solid currentColor;
-  font-size: 15px;
-  font-weight: 500;
 }
 
 .social-links a:hover {
@@ -328,7 +312,6 @@ address {
   justify-items: start;
   color: var(--muted);
   font-style: normal;
-  font-size: clamp(17px, 1.8vw, 20px);
 }
 
 address a {
@@ -342,7 +325,6 @@ address a {
   gap: 20px;
   padding: 28px clamp(20px, 5vw, 72px);
   color: var(--muted);
-  font-size: 14px;
 }
 
 address a {
@@ -401,13 +383,11 @@ address a {
 
   .brand {
     max-width: 190px;
-    font-size: 12px;
   }
 
   .nav {
     gap: 12px;
     flex-wrap: nowrap;
-    font-size: 13px;
   }
 
   .hero-logo {
