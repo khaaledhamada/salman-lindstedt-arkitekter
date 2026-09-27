@@ -300,6 +300,28 @@ h2 {
 .person-contact address a:hover {
   color: var(--ink);
 }
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  color: var(--ink);
+  border-bottom: 1px solid currentColor;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.social-links a:hover {
+  color: var(--sage);
+}
+
 address {
   display: grid;
   gap: 10px;
