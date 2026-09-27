@@ -124,7 +124,7 @@ main { position: relative; }
   max-width: 540px;
   margin: 0;
   line-height: 1;
-  background: #fff;
+  background: transparent;
   opacity: 1;
   mix-blend-mode: normal;
 }
