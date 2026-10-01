@@ -1,8 +1,19 @@
+/* Inter by Rasmus Andersson: https://rsms.me/inter/
+   License: assets/fonts/Inter-LICENSE.txt */
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/InterVariable.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
 :root {
   --paper: #f8f7f3;
   --paper-bg: #ffffff;
   --ink: #171715;
   --muted: #535b61;
+  --heading-color: #8290a4;
   --line: #d8d6cd;
   --sage: #596775;
   --clay: #9a705d;
@@ -13,11 +24,11 @@
   --wide: 1360px;
   --page-gutter: clamp(20px, 5vw, 72px);
   --section-gap: clamp(36px, 7vw, 100px);
-  --font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-family: "Inter", sans-serif;
   --text-size: 1.125rem;
-  --heading-size: clamp(1.75rem, 3.2vw, 2.25rem);
+  --heading-size: clamp(1.75rem, 3.2vw, 2rem);
   --weight-regular: 400;
-  --weight-bold: 600;
+  --weight-bold: 700;
 }
 
 * {
@@ -133,7 +144,7 @@ main { position: relative; }
 
 .hero-copy .hero-intro {
   margin: 0 0 24px;
-  color: var(--ink);
+  color: var(--heading-color);
 }
 
 .hero-copy > p:not(.eyebrow):not(.hero-intro) {
@@ -162,7 +173,7 @@ main { position: relative; }
 }
 
 .eyebrow {
-  color: var(--muted);
+  color: var(--heading-color);
   font-size: var(--text-size);
   font-weight: var(--weight-bold);
   line-height: 1.55;
@@ -184,6 +195,7 @@ p {
 h1,
 h2,
 .hero-copy .hero-intro {
+  color: var(--heading-color);
   font-size: var(--heading-size);
   font-weight: var(--weight-bold);
   line-height: 1.2;
@@ -209,7 +221,7 @@ h2 {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: var(--ink);
+  color: var(--heading-color);
   font-weight: var(--weight-bold);
   text-transform: uppercase;
   border-bottom: 1px solid currentColor;
@@ -266,7 +278,7 @@ h2 {
 
 .person-contact h3 {
   margin: 0 0 4px;
-  color: var(--ink);
+  color: var(--heading-color);
   font-size: inherit;
   font-weight: var(--weight-bold);
 }

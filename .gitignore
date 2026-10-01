@@ -12,3 +12,7 @@
 !/assets/salman-lindstedt-logo.svg
 !/assets/salman-lindstedt-grid.jpg
 !/assets/alhawraa-gunnar-portrait.jpg
+!/assets/fonts/
+/assets/fonts/*
+!/assets/fonts/InterVariable.woff2
+!/assets/fonts/Inter-LICENSE.txt
